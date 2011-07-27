@@ -1,0 +1,16 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3673
+
+Aldmeris is based on the oblivion theme for gedit.
+
+Features:
+
+- tango colors palette
+- support GUI, 256 and 16 colors for terminal emulators
+- option to use different terminal base colors in the colorscheme
+- tpope's fugitive support: well recognizable colors for the output of :Gstatus, and for git objects.
+
+Screenshot: https://github.com/veloce/vim-aldmeris/raw/master/screenshots/aldmeris.png
+
+https://github.com/veloce/vim-aldmeris
+
+
