@@ -119,7 +119,9 @@ if !exists("g:aldmeris_termcolors")
     let g:aldmeris_termcolors = "xterm"
 endif
 " option to disable bg color for transparent terminals
-let g:aldmeris_transparent = 0
+if !exists("g:aldmeris_transparent")
+    let g:aldmeris_transparent = 0
+endif
 " List terminals that support italics (I'm sure only for xrvt)
 let s:terms_italic = ["rxvt", "rxvt-unicode", "rxvt-unicode-256color"]
 " }}}
@@ -210,7 +212,7 @@ else
     let s:aluminium6  = "DarkGrey"
     let s:black       = "Black"
 endif
-if (!has("gui_running") || g:aldmeris_transparent == 1)
+if (!has("gui_running") && g:aldmeris_transparent == 1)
     let s:aluminium6 = "NONE"
 endif
 " }}}
