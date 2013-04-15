@@ -1,7 +1,7 @@
 " Vim color scheme
 " Name:         aldmeris.vim
 " Maintainer:   Vincent Velociter <vincent.velociter@gmail.com>
-" Version:      1.1
+" Version:      1.2
 " Url:          https://github.com/veloce/vim-aldmeris
 
 " Aldmeris is based on the gedit oblivion theme for vim.
@@ -241,7 +241,7 @@ endif
 " }}}
 " Highlight default (:help highlight-default) {{{
 " -------------------------------------------
-" ColorColumn	used for the columns set with 'colorcolumn'
+call s:Hi( 'ColorColumn',   s:plum2,        "NONE" )
 " Conceal		placeholder characters substituted for concealed
 call s:Hi( 'Cursor',        s:aluminium2,   s:black )
 " CursorIM	like Cursor, but used when in IME mode
@@ -301,13 +301,13 @@ hi link gitcommitHeader    gitcommitComment
 hi link gitcommitUntracked gitcommitComment
 hi link gitcommitDiscarded gitcommitComment
 hi link gitcommitSelected  gitcommitComment
-call s:Hi( 'gitcommitDiscardedType',  "NONE", s:scarletred1 )
 call s:Hi( 'gitcommitSelectedType',   "NONE", s:chameleon1 )
-call s:Hi( 'gitcommitUnmergedType',   "NONE", s:butter1 )
-call s:Hi( 'gitcommitUntrackedFile',  "NONE", s:plum1,       "bold" )
-call s:Hi( 'gitcommitDiscardedFile',  "NONE", s:scarletred1, "bold" )
+call s:Hi( 'gitcommitDiscardedType',  "NONE", s:butter1 )
+call s:Hi( 'gitcommitUnmergedType',   "NONE", s:scarletred1 )
 call s:Hi( 'gitcommitSelectedFile',   "NONE", s:chameleon1,  "bold" )
-call s:Hi( 'gitcommitUnmergedFile',   "NONE", s:butter1,     "bold" )
+call s:Hi( 'gitcommitDiscardedFile',  "NONE", s:butter1,     "bold" )
+call s:Hi( 'gitcommitUnmergedFile',   "NONE", s:scarletred1, "bold" )
+call s:Hi( 'gitcommitUntrackedFile',  "NONE", s:plum1,       "bold" )
 " }}}
 " diff colors {{{
 hi link diffFile           Special
@@ -338,10 +338,11 @@ hi link rubyClass Keyword
 hi link rubyDefine Keyword
 "  }}}
 " Javascript colors {{{
-hi link javaScriptBraces normal
 " following syntax from https://github.com/pangloss/vim-javascript
-hi link javaScriptLabel Identifier
-hi link javaScriptThis Identifier
+hi link jsBraces normal
+hi link jsLabel Identifier
+hi link jsThis Identifier
+hi link jsReturn Statement
 " }}}
 " PHP Colors {{{
 " ----------
@@ -370,4 +371,5 @@ hi link cssGeneratedContentProp cssRenderProp
 hi link cssValueLength Boolean
 hi link cssPseudoClassId Identifier
 " }}}
-" vim:foldmethod=marker
+
+" vim: set fdm=marker:
